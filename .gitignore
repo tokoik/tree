@@ -1,0 +1,40 @@
+#
+# for Linux
+#
+core
+*.o
+*~
+a.out
+tree
+#
+# for Mac
+#
+.DS_Store
+build/
+*.xcodeproj/*
+!project.pbxproj
+#
+# for Windows
+#
+Debug/
+Thumbs.db
+*.obj
+*.dll
+*.lib
+*.ncb
+*.suo
+*.vcproj.*.*.user
+#
+# anothre stuff
+#
+*.bak
+freeglut*
+glew.h
+glext.h
+glut.h
+glxew.h
+glxext.h
+wglew.h
+wglext.h
+LICENSE.txt
+COPYING
