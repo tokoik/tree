@@ -1,6 +1,6 @@
 LDLIBS = -L/usr/X11R6/lib -lglut -lGLU -lGL -lXmu -lXi -lXext -lX11 -lpthread -lm
 TARGETS = tree
-OBJECTS = main.o tree.o extrusion.o Matrix.o Trackball.o
+OBJECTS = main.o extrusion.o Tree.o Matrix.o Trackball.o
 
 $(TARGETS): $(OBJECTS)
 	$(CXX) $(CFLAGS) -o $@ $(OBJECTS) $(LDLIBS)
