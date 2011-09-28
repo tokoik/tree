@@ -3,10 +3,10 @@
 //#  pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 #  undef GL_GLEXT_PROTOTYPES
 #  include "glut.h"
-#elif defined(__APPLE__) || defined(MACOSX)
-#  include <GLUT/glut.h>
-#else
+#elif defined(X11)
 #  include <GL/glut.h>
+#elif defined(__APPLE__)
+#  include <GLUT/glut.h>
 #endif
 
 /*
