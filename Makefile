@@ -1,16 +1,15 @@
-CXXFLAGS = -DX11 -Wall
-LDLIBS = -L/usr/X11R6/lib -lglut -lGLU -lGL -lm
-TARGETS = tree
-OBJECTS = main.o extrusion.o Tree.o Matrix.o Trackball.o
+CXXFLAGS	= -I/usr/X11R6/include -DX11 -Wall
+LDLIBS	= -L/usr/X11R6/lib -lglut -lGLU -lGL -lm
+OBJECTS	= main.o extrusion.o Tree.o Matrix.o Trackball.o
+TARGET	= tree
 
-$(TARGETS): $(OBJECTS)
-	$(CXX) $(CFLAGS) -o $@ $(OBJECTS) $(LDLIBS)
-
-main.o: Tree.h Trackball.h
-extrusioh.o: extrusion.h
-Tree.o: Tree.h extrusion.h Matrix.h
-Matrix.o: Matrix.h
-Trackball.o: Trackball.h
+$(TARGET): $(OBJECTS)
+	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 clean:
-	-rm -f $(TARGETS) *.o *~
+	-rm -f $(TARGET) *.o *~ core
+
+depend:
+	$(CXX) $(CXXFLAGS) -MM *.cpp > $(TARGET).d
+
+include $(wildcard *.d)
