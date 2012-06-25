@@ -114,12 +114,12 @@ static void resize(int w, int h)
   // 透視変換行列の設定
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluPerspective(30.0, (GLdouble)w / (GLdouble)h, 1.0, 20.0);
+  gluPerspective(60.0, (GLdouble)w / (GLdouble)h, 1.0, 20.0);
 
   // モデルビュー変換行列の設定
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-  gluLookAt(0.0, 0.0, 10.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+  gluLookAt(0.0, 5.0, 10.0, 0.0, 5.0, 0.0, 0.0, 1.0, 0.0);
 
   // 光源の位置の設定（視点位置基準）
   glLightfv(GL_LIGHT0, GL_POSITION, light);
