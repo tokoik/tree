@@ -14,7 +14,7 @@
 */
 #include "Trackball.h"
 static Trackball *tb = 0;               // トラックボールのオブジェクト
-static int btn;                         // 押されているマウスボタン
+static int btn = -1;                    // 押されているマウスボタン
 
 /*
 ** L-System による木の生成
