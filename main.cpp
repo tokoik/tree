@@ -249,7 +249,7 @@ int main(int argc, char *argv[])
   glutInit(&argc, argv);
   glutInitWindowSize(500, 500);
   glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
-  glutCreateWindow(argv[0]);
+  glutCreateWindow("Tree");
   glutDisplayFunc(display);
   glutReshapeFunc(resize);
   glutMouseFunc(mouse);
