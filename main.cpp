@@ -64,7 +64,7 @@ static const double radius = 0.02;
 */
 static const int side = 8;
 
-/*
+/*z
 ** �؂̐F
 */
 static const GLfloat wood[] = { 0.5f, 0.3f, 0.1f, 1.0f };
